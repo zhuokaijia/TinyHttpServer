@@ -277,7 +277,7 @@ void *ths_thread_proc(void* param){
     pthread_t ptid = pthread_self();
 
     char* buff = new char[(2 << 20)];
-    memset(buff, 0, sizeof(0));
+    memset(buff, 0, sizeof(buff));
 
     setOnNagle(ths_ev.data.fd);
 
